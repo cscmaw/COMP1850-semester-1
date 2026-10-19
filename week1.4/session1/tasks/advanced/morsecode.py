@@ -13,7 +13,7 @@
 """
 
 
-def string_to_morse_code(string):
+def string_to_morse_code(in_string):
     """
     Returns the Morse code of the string.
     """
@@ -30,6 +30,16 @@ def string_to_morse_code(string):
              ':': '---...', ',': '--..--', '=': '-...-',  '!': '-.-.--',
              '.': '.-.-.-', '-': '-....-', '+': '.-.-.',  '"': '.-..-.',
              '?': '..--..', '/': '-..-.'}
+    coded = in_string.upper()
+    morse = ""
+    for c in coded:    
+        if c ==" ":
+            morse = morse + "   "
+        else:
+            morse = morse + mcode[c] + " "
+
+    return morse
+
 
 
 # test data

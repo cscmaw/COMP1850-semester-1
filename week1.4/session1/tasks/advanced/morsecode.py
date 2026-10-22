@@ -29,16 +29,16 @@ def string_to_morse_code(in_string):
              "'": '.----.', '@': '.--.-.', ')': '-.--.-', '(': '-.--.',
              ':': '---...', ',': '--..--', '=': '-...-',  '!': '-.-.--',
              '.': '.-.-.-', '-': '-....-', '+': '.-.-.',  '"': '.-..-.',
-             '?': '..--..', '/': '-..-.'}
+             '?': '..--..', '/': '-..-.',' ':  '  '}
     coded = in_string.upper()
-    morse = ""
-    for c in coded:    
-        if c ==" ":
-            morse = morse + "   "
-        else:
-            morse = morse + mcode[c] + " "
 
-    return morse
+    code = [mcode[c] for c in coded]
+    return " ".join(code)
+
+    #morse = ""
+    #for c in coded:    
+    #    morse = morse + mcode[c] + " "
+    #return morse
 
 
 
